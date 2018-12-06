@@ -6,5 +6,9 @@ module.exports = {
     },
     getMovieById(id){
         return db('movies').where('id', id).first()
+    },
+    createStudent(newMovie){
+        return db('movies').insert(newMovie).returning('*')
     }
+
 }

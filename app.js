@@ -13,8 +13,16 @@ app.get('/', (req,res) =>{
 })
 
 app.get('/:id', (req, res) =>{
-    queries.getMovieById(req.params.id).then(students => res.send(movie))
+    queries.getMovieById(req.params.id).then(movie => res.send(movie))
 })
+
+app.post('/', (req,res) => {
+    queries.createMovie(req.body).then(movie => res.send(movie[0]))
+})
+
+
+
+
 
 app.use(function (err, req, res, next) {
     console.error(err.stack)
