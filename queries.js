@@ -7,7 +7,7 @@ module.exports = {
     getMovieById(id){
         return db('movies').where('id', id).first()
     },
-    createStudent(newMovie){
+    createMovie(newMovie){
         return db('movies').insert(newMovie).returning('*')
     }
 
