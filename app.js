@@ -20,6 +20,9 @@ app.post('/', (req,res) => {
     queries.createMovie(req.body).then(movie => res.send(movie[0]))
 })
 
+app.put('/:id', (req,res) => {
+    queries.updateMovie(req.params.id, req.body).then(updatedMovie => res.send(updatedMovie))
+})
 
 
 
