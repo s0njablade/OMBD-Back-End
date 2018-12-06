@@ -36,7 +36,7 @@ exports.seed = function(knex, Promise) {
   title: 'Pulp Fiction',
   poster_URL: 'https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg',
   director: 'Quentin Tarantino',
-  year: 1994 ,
+  year: 1994,
   my_rating: 100,
 },
 {
