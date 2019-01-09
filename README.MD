@@ -16,6 +16,9 @@ MovieCRUD is a full stack application created that allows you to create movie re
 * [Knex]
 * [Postgresql]
 
+## Deployed Site 
+https://omdb-sonja-front.firebaseapp.com/
+
 ## Authors
 
 * **Sonja Chacon** 
