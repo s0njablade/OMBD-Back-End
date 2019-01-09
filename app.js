@@ -8,6 +8,8 @@ const port = process.env.PORT || 4000
 app.use(bodyParser.json())
 app.use(cors())
 
+app.options('*', cors())
+
 app.get('/', (req,res) =>{
     queries.getAllMovies().then(movie => res.send(movie))
 })
@@ -27,13 +29,11 @@ app.put('/:id', (req,res) => {
 app.delete('/:id', (req,res) => {
     queries.deleteMovie(req.params.id).then(res.sendStatus(204))
 })
-
-
-
+ 
 app.use(function (err, req, res, next) {
     console.error(err.stack)
     res.status(500).send('Something broke!')
-  })
+})
 
 app.listen(port, () => {
     console.log(`running on port: ${port}`)
